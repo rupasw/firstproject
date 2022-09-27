@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_gravity="end"
+        android:gravity="bottom"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="random" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:id="@+id/text1"
+            android:text="Sign in to your Account"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text1"
+            android:layout_centerHorizontal="true"
+            android:hint="Username"
+            android:maxLength="10"
+            android:inputType="textPersonName"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_centerHorizontal="true"
+            android:hint="Password"
+            android:inputType="textPassword" />
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/password"
+            android:layout_alignStart="@id/password"
+            android:id="@+id/checkbox1"
+
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_toRightOf="@id/checkbox1"
+            android:text="Remember me?"
+            android:textColor="@color/teal_200"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/text2"
+            android:text="Sign In"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgot"
+            android:text="Forgot Password?"
+            android:visibility="visible"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/emil"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgot"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Email Address"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Send OTP"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3"
+            android:layout_centerHorizontal="true"
+            android:text="Don't have an account yet?"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text3"
+            android:layout_centerHorizontal="true"
+            android:text="Sign up"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
